@@ -659,7 +659,8 @@ UNIFEX_TERM stop_sound(UnifexEnv *env, UnifexPayload *payload) {
 
 UNIFEX_TERM is_sound_ready(UnifexEnv *env, UnifexPayload *payload) {
   Sound sound = get_sound_unifex_payload(env, payload);
-  bool res = IsSoundReady(sound);
+  // bool res = IsSoundReady(sound);
+  bool res = false; //　Changed because it could not be built
   return is_sound_ready_result(env, res);
 }
 
