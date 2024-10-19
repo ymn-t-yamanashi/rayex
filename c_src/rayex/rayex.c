@@ -475,6 +475,12 @@ UNIFEX_TERM draw_line(UnifexEnv *env, int start_x, int start_y, int end_x,
   return draw_pixel_result_ok(env);
 }
 
+UNIFEX_TERM draw_circle(UnifexEnv *env, int center_x, int center_y, double radius,
+                        color c) {
+  DrawCircle(center_x, center_y, radius, COLOR(c));
+  return draw_pixel_result_ok(env);
+}
+
 UNIFEX_TERM draw_rectangle_rec(UnifexEnv *env, rectangle r, color c) {
   DrawRectangleRec(RECTANGLE(r), COLOR(c));
   return draw_rectangle_rec_result_ok(env);

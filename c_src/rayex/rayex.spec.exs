@@ -134,6 +134,9 @@ spec draw_pixel(x :: int, y :: int, color :: color) :: :ok :: label
 spec draw_line(start_x :: int, start_y :: int, end_x :: int, end_y :: int, color :: color) ::
        :ok :: label
 
+spec draw_circle(center_x :: int, center_y :: int, radius :: double, color :: color) ::
+       :ok :: label
+
 spec draw_rectangle_rec(rec :: rectangle, color :: color) :: :ok :: label
 spec draw_rectangle_lines_ex(rec :: rectangle, line_thick :: int, color :: color) :: :ok :: label
 spec draw_triangle(v1 :: vector2, v2 :: vector2, v3 :: vector2, color :: color) :: :ok :: label
@@ -181,7 +184,7 @@ spec draw_text(text :: string, pos_x :: int, pos_y :: int, font_size :: int, col
 
 # Text codepoints management functions (unicode characters)
 
-# Text strings management functions (no utf8 strings, only byte chars)         
+# Text strings management functions (no utf8 strings, only byte chars)
 # NOTE: Some strings allocate memory internally for returned strings, just be careful!
 
 ##########
