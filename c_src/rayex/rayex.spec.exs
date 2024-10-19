@@ -134,7 +134,7 @@ spec draw_pixel(x :: int, y :: int, color :: color) :: :ok :: label
 spec draw_line(start_x :: int, start_y :: int, end_x :: int, end_y :: int, color :: color) ::
        :ok :: label
 
-spec draw_circle(center_x :: int, center_y :: int, radius :: double, color :: color) ::
+spec draw_circle(center_x :: int, center_y :: int, radius :: float, color :: color) ::
        :ok :: label
 
 spec draw_rectangle_rec(rec :: rectangle, color :: color) :: :ok :: label
